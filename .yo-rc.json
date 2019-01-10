@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Ozan Turksever",
+      "authorEmail": "ozan.turksever@logsign.com",
+      "authorUrl": ""
+    }
+  }
+}
