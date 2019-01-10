@@ -1,7 +1,7 @@
 import React from "react";
 
-const Component = props => {
+const Xxx = props => {
   return <div>statelessComponent</div>;
 };
 
-Component.propTypes = {};
+Xxx.propTypes = {};

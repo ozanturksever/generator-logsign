@@ -1,8 +1,8 @@
 /* platform=web */
 import React from "react";
 
-const Component> = link(
+const Xxx = link(
   {
   },
-  ComponentInner
+  XxxInner
 )

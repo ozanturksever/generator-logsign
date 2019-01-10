@@ -2,14 +2,14 @@
 import React from "react";
 import { describe, it } from "@bigtest/mocha";
 import { expect } from "chai";
-import Component from "./Component";
-import ComponentInteractor from "./ComponentInteractor";
+import Xxx from "./Xxx";
+import XxxInteractor from "./XxxInteractor";
 import { setupTestComponent } from "logsign-base-app";
 
-describe("Component", () => {
+describe("Xxx", () => {
   const interactor = setupTestComponent(
-    ComponentInteractor,
-    () => <Component />,
+    XxxInteractor,
+    () => <Xxx />,
     {}
 );
   it("is exists", () => {});
