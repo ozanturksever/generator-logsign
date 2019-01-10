@@ -4,7 +4,7 @@ const chalk = require("chalk");
 const yosay = require("yosay");
 
 module.exports = class extends Generator {
-  constructor(args, opts){
+  constructor(args, opts) {
     super(args, opts);
 
     this.option("componentName", {
@@ -14,7 +14,7 @@ module.exports = class extends Generator {
     this.option("path", { description: "create path", type: String });
   }
 
-  prompting(){
+  prompting() {
     // Have Yeoman greet the user.
     this.log(
       yosay(
@@ -43,8 +43,8 @@ module.exports = class extends Generator {
     // });
   }
 
-  writing(){
-    function capitalizeFirstLetter(string){
+  writing() {
+    function capitalizeFirstLetter(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
     }
 
@@ -72,15 +72,13 @@ module.exports = class extends Generator {
       vars
     );
     this.fs.copyTpl(
-      this.templatePath("connected.test.ejs"),
+      this.templatePath("stateless.test.ejs"),
       this.destinationPath(
         `${this.options.path}/${compName}/${compName}.test.js`
       ),
       vars
     );
   }
-
-
 
   install() {}
 };
