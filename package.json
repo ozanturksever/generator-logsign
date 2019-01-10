@@ -1,6 +1,6 @@
 {
   "name": "generator-logsign",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "logsign generator",
   "homepage": "",
   "author": {
@@ -10,7 +10,8 @@
   },
   "files": [
     "generators/app",
-    "generators/connectedComponent"
+    "generators/connectedComponent",
+    "generators/statelessComponent"
   ],
   "main": "generators/index.js",
   "keywords": [
