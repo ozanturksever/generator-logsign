@@ -6,3 +6,4 @@ const Xxx = link(
   },
   XxxInner
 )
+export default Xxx;
