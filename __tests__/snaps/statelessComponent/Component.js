@@ -5,3 +5,4 @@ const Xxx = props => {
 };
 
 Xxx.propTypes = {};
+export default Xxx;
