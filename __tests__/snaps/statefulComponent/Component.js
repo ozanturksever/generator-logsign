@@ -6,7 +6,7 @@ class Xxx extends React.Component {
   }
 
   render(){
-    return <div>statelessComponent</div>;
+    return <div>statefulComponent</div>;
   }
 }
 
