@@ -10,7 +10,8 @@ function capitalizeFirstLetter(string) {
 const testTable = [
   {generator:"statelessComponent", componentName:"xxx"},
   {generator:"connectedComponent", componentName:"xxx"},
-  {generator:"moduleComponent", componentName:"xxx"}
+  {generator:"moduleComponent", componentName:"xxx"},
+  {generator:"statefulComponent", componentName:"xxx"}
 ];
 describe("generator-logsign", () => {
   testTable.forEach(subject => {
