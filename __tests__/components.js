@@ -9,14 +9,16 @@ function capitalizeFirstLetter(string) {
 }
 const testTable = [
   {generator:"statelessComponent", componentName:"xxx"},
-  {generator:"connectedComponent", componentName:"xxx"}
+  {generator:"connectedComponent", componentName:"xxx"},
+  {generator:"moduleComponent", componentName:"xxx"},
+  {generator:"statefulComponent", componentName:"xxx"}
 ];
 describe("generator-logsign", () => {
   testTable.forEach(subject => {
     const subjectName = subject.generator;
     const componentName = subject.componentName;
     const capitilizedComponentName = capitalizeFirstLetter(componentName);
-    describe(`subjectName componentName: ${componentName}`, () => {
+    describe(`subjectName componentName: ${subjectName}`, () => {
       const snapDir = `${__dirname}/snaps/${subjectName}`;
       let dir;
       beforeEach(async () => {
