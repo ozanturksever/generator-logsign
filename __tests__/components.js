@@ -8,10 +8,9 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 const testTable = [
-  {generator:"statelessComponent", componentName:"xxx"},
-  {generator:"connectedComponent", componentName:"xxx"},
-  {generator:"moduleComponent", componentName:"xxx"},
-  {generator:"statefulComponent", componentName:"xxx"}
+  { generator: "statelessComponent", componentName: "xxx", test: true },
+  { generator: "moduleComponent", componentName: "xxx", test: false },
+  { generator: "statefulComponent", componentName: "xxx", test: true }
 ];
 describe("generator-logsign", () => {
   testTable.forEach(subject => {
@@ -27,27 +26,31 @@ describe("generator-logsign", () => {
           .inTmpDir()
           .withOptions({ componentName: componentName, path: "src" });
       });
-      it("should have index.js", () => {
+      it("should have index.ts", () => {
         assert.fileContent(
-          `${dir}/src/${capitilizedComponentName}/index.js`,
-          fs.readFileSync(`${snapDir}/index.js`).toString()
-        );
-      });
-      it("should have interactor", () => {
-        assert.fileContent(
-          `${dir}/src/${capitilizedComponentName}/${capitilizedComponentName}Interactor.js`,
-          fs.readFileSync(`${snapDir}/interactor.js`).toString()
+          `${dir}/src/${capitilizedComponentName}/index.ts`,
+          fs.readFileSync(`${snapDir}/index.ts`).toString()
         );
       });
       it("should have component", () => {
         assert.fileContent(
-          `${dir}/src/${capitilizedComponentName}/${capitilizedComponentName}.js`,
-          fs.readFileSync(`${snapDir}/Component.js`).toString()
+          `${dir}/src/${capitilizedComponentName}/${capitilizedComponentName}.tsx`,
+          fs.readFileSync(`${snapDir}/Component.tsx`).toString()
         );
       });
-      it("should have component test", () => {
-        assert.file(`${dir}/src/${capitilizedComponentName}/${capitilizedComponentName}.test.js`);
-      });
+      if (testTable.test) {
+        it("should have interactor", () => {
+          assert.fileContent(
+            `${dir}/src/${capitilizedComponentName}/${capitilizedComponentName}Interactor.ts`,
+            fs.readFileSync(`${snapDir}/interactor.ts`).toString()
+          );
+        });
+        it("should have component test", () => {
+          assert.file(
+            `${dir}/src/${capitilizedComponentName}/${capitilizedComponentName}.test.tsx`
+          );
+        });
+      }
     });
   });
 });

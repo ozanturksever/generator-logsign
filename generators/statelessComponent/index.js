@@ -56,25 +56,25 @@ module.exports = class extends Generator {
 
     this.fs.copyTpl(
       this.templatePath("index.ejs"),
-      this.destinationPath(`${this.options.path}/${compName}/index.js`),
+      this.destinationPath(`${this.options.path}/${compName}/index.ts`),
       vars
     );
     this.fs.copyTpl(
       this.templatePath("Component.ejs"),
-      this.destinationPath(`${this.options.path}/${compName}/${compName}.js`),
+      this.destinationPath(`${this.options.path}/${compName}/${compName}.tsx`),
       vars
     );
     this.fs.copyTpl(
       this.templatePath("interactor.ejs"),
       this.destinationPath(
-        `${this.options.path}/${compName}/${compName}Interactor.js`
+        `${this.options.path}/${compName}/${compName}Interactor.ts`
       ),
       vars
     );
     this.fs.copyTpl(
       this.templatePath("stateless.test.ejs"),
       this.destinationPath(
-        `${this.options.path}/${compName}/${compName}.test.js`
+        `${this.options.path}/${compName}/${compName}.test.tsx`
       ),
       vars
     );
