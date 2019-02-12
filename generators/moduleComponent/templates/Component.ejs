@@ -1,9 +1,13 @@
-import React from "react";
+import * as React from "react";
 import { ComponentFactory } from "logsign-base-app";
-import { <%= componentName %>Module } from "src/moduleNames";
-import { <%= componentName %>Connected } from "../<%= componentName %>Connected";
+// todo create ProfileFormModule module
+import { <%= componentName %> } from "src/moduleNames";
+
+const <%= componentName %>Connected = () => {
+  return <div>content</div>;
+};
 
 export default ComponentFactory(<%= componentName %>Connected, {
-  moduleName: <%= componentName %>Module,
+  moduleName: <%= componentName %>,
   signals: {}
 });
