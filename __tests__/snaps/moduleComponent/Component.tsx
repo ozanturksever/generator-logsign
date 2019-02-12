@@ -1,11 +1,11 @@
 import * as React from "react";
-import { ComponentFactory } from "logsign-base-app";
-// todo create ProfileFormModule module
+import { ComponentFactory, link } from "logsign-base-app";
+// todo create Xxx module
 import { Xxx } from "src/moduleNames";
 
-const XxxConnected = () => {
+const XxxConnected = link({}, () => {
   return <div>content</div>;
-};
+});
 
 export default ComponentFactory(XxxConnected, {
   moduleName: Xxx,
