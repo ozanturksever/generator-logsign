@@ -10,7 +10,8 @@ function capitalizeFirstLetter(string) {
 const testTable = [
   { generator: "statelessComponent", componentName: "xxx", test: true },
   { generator: "moduleComponent", componentName: "xxx", test: false },
-  { generator: "statefulComponent", componentName: "xxx", test: true }
+  { generator: "statefulComponent", componentName: "xxx", test: true },
+  { generator: "formComponent", componentName: "xxx", test: true }
 ];
 describe("generator-logsign", () => {
   testTable.forEach(subject => {
@@ -38,7 +39,7 @@ describe("generator-logsign", () => {
           fs.readFileSync(`${snapDir}/Component.tsx`).toString()
         );
       });
-      if (testTable.test) {
+      if (subject.test) {
         it("should have interactor", () => {
           assert.fileContent(
             `${dir}/src/${capitilizedComponentName}/${capitilizedComponentName}Interactor.ts`,
