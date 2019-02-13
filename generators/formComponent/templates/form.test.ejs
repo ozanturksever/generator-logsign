@@ -1,0 +1,18 @@
+/* platform=web */
+import React from "react";
+import { describe, it } from "@bigtest/mocha";
+import { expect } from "chai";
+import <%= componentName %> from "./<%= componentName %>";
+import <%= componentName %>Interactor from "./<%= componentName %>Interactor";
+import { setupTest<%= componentName %> } from "logsign-base-app";
+
+describe("<%= componentName %>", () => {
+  const interactor = setupTest<%= componentName %>(
+    <%= componentName %>Interactor,
+    () => <<%= componentName %> />,
+    {}
+);
+  it("is exists", () => {
+    expect(interactor.isExists).to.be.equal(true);
+  });
+});

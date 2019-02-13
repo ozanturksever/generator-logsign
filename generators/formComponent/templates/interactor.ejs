@@ -1,0 +1,7 @@
+import { interactor, isPresent } from "@bigtest/interactor";
+
+@interactor
+class <%= componentName %>Interactor {
+  public isExists = isPresent("[data-test-form]");
+}
+export default <%= componentName %>Interactor;
