@@ -10,7 +10,7 @@
   },
   "files": [
     "generators/app",
-    "generators/connectedComponent",
+    "generators/formComponent",
     "generators/statelessComponent",
     "generators/statefulComponent",
     "generators/moduleComponent"
